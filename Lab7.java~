@@ -1,0 +1,81 @@
+public class Lab7{
+  public static String teachMe(String word){
+    return word.charAt(0) + " is for " + word;
+  }
+  
+  //The first terrible attempt
+//  public static String pigLatin(String sentence){
+//    int spaces = sentence.indexOf(" "), prev = 0, i = 0, wordStart;
+//    String newWord = "";
+//    while(spaces > -1){
+//      //101, 105, 111, 117, 125, 141, 145, 151, 157, 165
+//      wordStart = i;
+//      while(sentence.charAt(i) != 101 && sentence.charAt(i) != 105 && 
+//            sentence.charAt(i) != 111 && sentence.charAt(i) != 117 && 
+//            sentence.charAt(i) != 125 && sentence.charAt(i) != 141 && 
+//            sentence.charAt(i) != 145 && sentence.charAt(i) != 151 && 
+//            sentence.charAt(i) != 157 && sentence.charAt(i) != 165 && 
+//            i < spaces){
+//        newWord += sentence.charAt(i);
+//        System.out.println("" + i + spaces);
+//        i++;
+//      }
+//      newWord = sentence.substring(i, spaces) + newWord + "ay";
+//      sentence = sentence.substring(0, wordStart) + newWord + "@" + sentence.substring(spaces + 1);
+//      newWord = "";
+//      i += 4;
+//      spaces = sentence.indexOf(" ");
+//      System.out.println(sentence);
+//    }
+//    return sentence;
+//  }
+  
+  public static String findWord(String sentence){
+    String word = "";
+    int wordSize = sentence.indexOf(" ");
+    for(int i = 0; i < wordSize; i++){
+      word += sentence.charAt(i);
+    }
+    return word + wordSize;
+  }
+  
+  public static String convertWord(String sentence){
+    String word = findWord(sentence);
+    int wl = Character.getNumericValue(word.charAt(word.length() - 1));
+    word = word.substring(0, word.length() - 1);
+  }
+  
+  public static String pigLatin(String sentence){
+    String newWord, newSentence = ""; 
+    int wl, vowel;
+    while(/*thing*/){
+      newWord = convertWord(sentence);
+      newSentence += newWord;
+      if(sentence.charAt(0) == 101 || sentence.charAt(0) == 105 || 
+         sentence.charAt(0) == 111 || sentence.charAt(0) == 117 || 
+         sentence.charAt(0) == 125 || sentence.charAt(0) == 141 || 
+         sentence.charAt(0) == 145 || sentence.charAt(0) == 151 || 
+         sentence.charAt(0) == 157 || sentence.charAt(0) == 165){
+        vowel = 3;
+      }
+      else{
+        vowel = 2;
+      }
+      sentence = sentence.substring(newWord.length() - vowel)
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
