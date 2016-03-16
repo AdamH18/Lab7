@@ -43,6 +43,16 @@ public class Lab7{
     String word = findWord(sentence);
     int wl = Character.getNumericValue(word.charAt(word.length() - 1));
     word = word.substring(0, word.length() - 1);
+    if(word.charAt(0) == 101 || word.charAt(0) == 105 || 
+         word.charAt(0) == 111 || word.charAt(0) == 117 || 
+         word.charAt(0) == 125 || word.charAt(0) == 141 || 
+         word.charAt(0) == 145 || word.charAt(0) == 151 || 
+         word.charAt(0) == 157 || word.charAt(0) == 165){
+      word += "way";
+    }
+    else{
+    }
+    return word;
   }
   
   public static String pigLatin(String sentence){
@@ -51,11 +61,11 @@ public class Lab7{
     while(/*thing*/){
       newWord = convertWord(sentence);
       newSentence += newWord;
-      if(sentence.charAt(0) == 101 || sentence.charAt(0) == 105 || 
-         sentence.charAt(0) == 111 || sentence.charAt(0) == 117 || 
-         sentence.charAt(0) == 125 || sentence.charAt(0) == 141 || 
-         sentence.charAt(0) == 145 || sentence.charAt(0) == 151 || 
-         sentence.charAt(0) == 157 || sentence.charAt(0) == 165){
+      if(newWord.charAt(0) == 101 || newWord.charAt(0) == 105 || 
+         newWord.charAt(0) == 111 || newWord.charAt(0) == 117 || 
+         newWord.charAt(0) == 125 || newWord.charAt(0) == 141 || 
+         newWord.charAt(0) == 145 || newWord.charAt(0) == 151 || 
+         newWord.charAt(0) == 157 || newWord.charAt(0) == 165){
         vowel = 3;
       }
       else{
